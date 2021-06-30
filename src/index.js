@@ -1,17 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from './Dreact/react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+function FunctionComponent(props) {
+  return (
+    <div className="functionBorder">
+      <p>函数组件-{props.name}</p>
+    </div>
+  )
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const jsx = (
+  <div className="border">
+    <h1>react17</h1>
+    <a href="www.baidu.com">didi</a>
+    <FunctionComponent name="function"/>
+  </div>
+)
+
+ReactDOM.render(jsx, document.getElementById('root'));
+
